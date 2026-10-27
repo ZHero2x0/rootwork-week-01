@@ -50,15 +50,13 @@ if (age >= 18 && score >= 60 && hasLaptop && hasInternet && completedRegistratio
 
 //TEST CASE 5
 //input
-// age = 18;
-// score = 91;
-// hasLaptop = false;
-// if (age >= 18 && score >= 60 && hasLaptop && hasInternet && completedRegistration) {
-//   console.log('Eligible');
-// } else if (age >= 18 && score >= 90 && !hasLaptop && hasInternet && completedRegistration) {
-//   console.log('Partially Eligible');
-// } else {
-//   console.log('Not eligible');
-// }
-//expected result: Partially Eligible
-//actual result: Eligible
+age = 18;
+score = 91;
+hasLaptop = false;
+if (age >= 18 && score >= 60 && hasLaptop && hasInternet && completedRegistration) {
+  console.log('Eligible');
+} else {
+  console.log('Not eligible');
+}
+//expected result: Not eligible
+//actual result: Not eligible
