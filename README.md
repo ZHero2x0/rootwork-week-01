@@ -11,4 +11,4 @@
 
 4.  Someone with a high score could still be ineligible in a case were the student is below the age of 18. It can also be in a case where one or any of the other variables are false.
 
-5.  A LOT!
+5.  Learnt that writing Javascript has to do with LOGIC. Trying to figure out the best logic to provide the desired or best result.
