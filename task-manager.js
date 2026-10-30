@@ -2,8 +2,8 @@ let tasks = [
   {
     title: 'Create a Script',
     category: 'Javascript',
-    completed: false,
-    priority: 'High',
+    completed: true,
+    priority: 'low',
   },
   {
     title: 'Make a song',
@@ -14,19 +14,19 @@ let tasks = [
   {
     title: 'Draw a bird',
     category: 'Personal',
-    completed: false,
+    completed: true,
     priority: 'medium',
   },
   {
     title: 'Write a Task Manager program',
     category: 'Javascript',
-    completed: false,
-    priority: 'high',
+    completed: true,
+    priority: 'low',
   },
   {
     title: 'Sleep 12 hours a day',
     category: 'Personal',
-    completed: false,
+    completed: true,
     priority: 'medium',
   },
   {
@@ -65,3 +65,52 @@ function tasksStats() {
   console.log('Pending Tasks:', pendingTasks);
 }
 tasksStats();
+
+function tasksStatus() {
+  let highPriorityTask = false;
+  let completedTask = false;
+
+  for (let task of tasks) {
+    if (task.priority === 'high') {
+      highPriorityTask = true;
+      console.log(`
+      High priority Task: ${task.title}
+      ${task.category}
+      ${task.completed}
+      ${task.priority}
+    `);
+    }
+
+    if (task.completed === false) {
+      completedTask = true;
+      console.log(`
+      Incomplete Tasks: ${task.title}
+      ${task.category}
+      ${task.completed}
+      ${task.priority}
+    `);
+    }
+  }
+  if (highPriorityTask === false && completedTask === false) {
+    console.log('No high-priority tasks or incomplete tasks remaining.');
+  }
+}
+tasksStatus();
+
+function taskCategory() {
+  let personalTask = 0;
+  let jsTask = 0;
+
+  for (let task of tasks) {
+    if (task.category === 'Personal') {
+      personalTask++;
+    }
+
+    if (task.category === 'Javascript') {
+      jsTask++;
+    }
+  }
+  console.log('Personal Tasks:', personalTask);
+  console.log('Javascript Tasks:', jsTask);
+}
+taskCategory();
