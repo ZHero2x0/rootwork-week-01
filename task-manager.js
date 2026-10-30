@@ -39,14 +39,15 @@ let tasks = [
 
 function displayTasks() {
   for (let task of tasks) {
-    console.log(task.title);
+    console.log('Title:', task.title);
+    console.log('Category:', task.category);
+    console.log('Completed:', task.completed);
+    console.log('Priority:', task.priority);
   }
 }
 displayTasks();
 
 function tasksStats() {
-  console.log(tasks.length);
-
   let completedTask = 0;
 
   for (let task of tasks) {
@@ -56,6 +57,8 @@ function tasksStats() {
   }
 
   let pendingTasks = tasks.length - completedTask;
+
+  console.log('Total number of Tasks:', tasks.length);
 
   console.log('Completed Tasks:', completedTask);
 
