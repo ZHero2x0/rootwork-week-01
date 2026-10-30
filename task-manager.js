@@ -1,4 +1,4 @@
-const tasks = [
+let tasks = [
   {
     title: 'Create a Script',
     category: 'Javascript',
@@ -36,3 +36,29 @@ const tasks = [
     priority: 'low',
   },
 ];
+
+function displayTasks() {
+  for (let task of tasks) {
+    console.log(task.title);
+  }
+}
+displayTasks();
+
+function tasksStats() {
+  console.log(tasks.length);
+
+  let completedTask = 0;
+
+  for (let task of tasks) {
+    if (task.completed === true) {
+      completedTask++;
+    }
+  }
+
+  let pendingTasks = tasks.length - completedTask;
+
+  console.log('Completed Tasks:', completedTask);
+
+  console.log('Pending Tasks:', pendingTasks);
+}
+tasksStats();
