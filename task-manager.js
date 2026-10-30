@@ -37,6 +37,16 @@ let tasks = [
   },
 ];
 
+function addTask(title, category, completed, priority) {
+  tasks.push({
+    title,
+    category,
+    completed,
+    priority,
+  });
+}
+addTask('Time to Dance', 'Fun', true, 'low');
+
 function displayTasks() {
   for (let task of tasks) {
     console.log('Title:', task.title);
