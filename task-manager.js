@@ -81,20 +81,12 @@ function tasksStatus() {
   let completedTask = false;
 
   for (let task of tasks) {
-    if (task.priority === 'high') {
+    if (task.priority === 'high' && task.completed === false) {
       highPriorityTask = true;
+      completedTask = true;
+
       console.log(`
       High priority Task: ${task.title}
-      ${task.category}
-      ${task.completed}
-      ${task.priority}
-    `);
-    }
-
-    if (task.completed === false) {
-      completedTask = true;
-      console.log(`
-      Incomplete Tasks: ${task.title}
       ${task.category}
       ${task.completed}
       ${task.priority}
