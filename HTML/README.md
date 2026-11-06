@@ -26,3 +26,4 @@ I found nothing particularly confusing, but one interesting thing was that I spe
 ## Use of AI
 
 I used AI to understand and debug some errors I was getting on Nu HTML checker.
+Also to help untangle my git branches that I unintentionally messed up.
