@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <title>Personal Dev Profile</title>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="#aboutskills">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Send a Message</a>
+      </nav>
+
+      <div class="container">
+        <div id="profile">
+          <div id="name">
+            <p>Developer | Engineer</p>
+            <h1>ZHero.2x0</h1>
+            <a class="github" href="https://github.com/ZHero2x0" target="_blank">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <img src="Chillguy.jpg" alt="my profile picture" class="chillguy" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="aboutskills">
+        <div id="aboutme">
+          <div class="container">
+            <h2>Who I am...</h2>
+
+            <p>
+              I am ZHero, a developer with some years of experience in building static sites and one
+              dynamic site. I aim to redefine what it means and how it feels to build and be on the
+              internet.
+            </p>
+          </div>
+        </div>
+
+        <div id="skills">
+          <div class="container">
+            <h2>What I know...</h2>
+            <div id="toolkit">
+              <div class="kits">
+                <i class="fa-brands fa-html5 fa-float fa-6x" style="color: rgb(227, 79, 38)"></i>
+              </div>
+              <div class="kits">
+                <i class="fa-brands fa-css3 fa-float fa-5x" style="color: rgb(21, 114, 182)"></i>
+              </div>
+              <div class="kits">
+                <i class="fa-brands fa-js fa-float fa-5x" style="color: rgb(247, 223, 30)"></i>
+              </div>
+              <div class="kits">
+                <i class="fa-brands fa-git fa-float fa-5x" style="color: rgb(240, 80, 50)"></i>
+              </div>
+              <div class="kits">
+                <i class="fa-brands fa-github fa-float fa-5x" style="color: rgb(36, 41, 47)"></i>
+              </div>
+              <div class="kits">
+                <i class="devicon-vscode-plain colored fa-6x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>What I've been up to lately...</h2>
+        <div id="simplebuilds" class="container">
+          <a
+            href="https://zhero2x0.github.io/chat-app-CSS-illustration/"
+            target="_blank"
+            id="chatapp"
+            ><h3>Chat App</h3>
+            <p>A simple user Interface web page.</p></a
+          >
+
+          <a href="https://zhero2x0.github.io/Purrfect-Match" target="_blank" id="purrfect"
+            ><h3>Purrfect Match</h3>
+            <p>The Only Human-Feline Dating App.</p></a
+          >
+        </div>
+
+        <a href="https://oddruns.com" target="_blank" id="oddruns"
+          ><h3>OddRuns</h3>
+          <p>
+            A platform where users can post errands, tasks, or odd jobs and get matched with local
+            helpers.
+          </p></a
+        >
+      </section>
+
+      <section id="education">
+        <h2>Where & What I studied...</h2>
+
+        <div id="oau" class="container">
+          <img src="oau-logo.jpg" alt="OAU Logo" class="school-logo" />
+          <div>
+            <h3>Obafemi Awolowo University</h3>
+            <p>Bachelor of Science in Microbiology</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="message" class="container">
+        <section id="contact">
+          <h2>Contact the Chef. <span>Let's cook!</span></h2>
+          <form class="contactform">
+            <h3>Send a message</h3>
+            <p>Fill the form below to get in touch</p>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" />
+            <br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email Address" />
+            <br />
+            <label for="reason">Reason for Contact:</label>
+            <input type="text" id="reason" name="reason" placeholder="Why?" />
+            <br />
+            <label for="message">Message:</label>
+            <textarea
+              placeholder="Enter your message here...?"
+              cols="40"
+              rows="7"
+              id="message"
+              name="message">
+            </textarea>
+            <br />
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <hr />
+
+    <footer>
+      <div id="copyright" class="container">
+        <p>&copy; 2026 <a href="#aboutme">ZHero.2x0</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
