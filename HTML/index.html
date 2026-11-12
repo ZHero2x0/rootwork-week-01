@@ -83,7 +83,7 @@
       </section>
 
       <section id="projects">
-        <h2>What I built...</h2>
+        <h2>What I've been up to lately...</h2>
         <div id="simplebuilds" class="container">
           <a
             href="https://zhero2x0.github.io/chat-app-CSS-illustration/"
@@ -109,19 +109,23 @@
       </section>
 
       <section id="education">
-        <div class="container">
-          <h2>What I studied...</h2>
-          <h3>Obafemi Awolowo University</h3>
-          <p>Bachelor of Science in Microbiology</p>
+        <h2>Where & What I studied...</h2>
+
+        <div id="oau" class="container">
+          <img src="oau-logo.jpg" alt="OAU Logo" class="school-logo" />
+          <div>
+            <h3>Obafemi Awolowo University</h3>
+            <p>Bachelor of Science in Microbiology</p>
+          </div>
         </div>
       </section>
 
-      <hr />
-
-      <div class="container">
+      <div id="message" class="container">
         <section id="contact">
-          <h2>Send a Message</h2>
-          <form>
+          <h2>Contact the Chef. <span>Let's cook!</span></h2>
+          <form class="contactform">
+            <h3>Send a message</h3>
+            <p>Fill the form below to get in touch</p>
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" />
             <br />
@@ -132,7 +136,13 @@
             <input type="text" id="reason" name="reason" placeholder="Why?" />
             <br />
             <label for="message">Message:</label>
-            <input type="text" id="message" name="message" placeholder="What? How?" />
+            <textarea
+              placeholder="Enter your message here...?"
+              cols="40"
+              rows="7"
+              id="message"
+              name="message">
+            </textarea>
             <br />
             <button type="submit">Submit</button>
           </form>

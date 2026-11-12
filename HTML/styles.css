@@ -1,3 +1,10 @@
+:root {
+    --bg-color: #F0F0EE;
+    --text-color: #1F2421;
+    --accent: #cbd3c2;
+    --space-md: 40px 20px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,8 +13,8 @@
 
 body{
     font-family: Roboto;
-    background-color: #F0F0EE;
-    color: #1F2421;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .container {
@@ -18,13 +25,9 @@ body{
 nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.nav a {
-    text-decoration: none;
-    color: black;
+    gap: 25px;
+    margin: var(--space-md);
+    font-size: 20px;
 }
 
 h1 {
@@ -38,9 +41,13 @@ h2 {
     padding-bottom: 15px;
 }
 
+h3 {
+    padding-bottom: 5px;
+}
+
 header a {
     text-decoration: none;
-    color: #1F2421;
+    color: var(--text-color);
 }
 
 nav a:hover {
@@ -48,7 +55,7 @@ nav a:hover {
 }
 
 .github {
-    background-color: #1F2421;
+    background-color: var(--text-color);
     padding: 10px;
     width: fit-content;
     border-radius: 10px;
@@ -77,14 +84,11 @@ nav a:hover {
     gap: 20px;
 }
 
-img {
-    display: block;
-    border: 10px double #b5cbb9;
-    border-radius: 20%;
-    box-shadow: 20px 20px 0 #b5cbb9;
-}
-
 .chillguy {
+    display: block;
+    border: 10px double var(--accent);
+    border-radius: 20%;
+    box-shadow: 20px 20px 0 var(--accent);
     width: 100%;
     max-width: 500px;
 }
@@ -98,8 +102,10 @@ img {
     justify-content: center;
     align-items: center;
     gap: 100px;
-    background-color: #cbd3c2;
-    padding: 40px 20px;
+    background-color: var(--accent);
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--text-color);
+    box-shadow: 3px 3px 5px var(--text-color);
 }
 
 #toolkit {
@@ -115,8 +121,8 @@ img {
     gap: 100px;
     border: 5px double #b5cbb9;
     border-radius: 20%;
-    box-shadow: 2px 2px 0 #F0F0EE;
-    background-color: #F0F0EE;
+    box-shadow: 2px 2px 0 var(--bg-color);
+    background-color: var(--bg-color);
     padding: 5px;
 }
 
@@ -126,12 +132,12 @@ img {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding: 40px 20px;
+    padding: var(--space-md);
 }
 
 #projects a {
     text-decoration: none;
-    color: #1F2421;
+    color: var(--text-color);
 }
 
 #simplebuilds {
@@ -141,17 +147,112 @@ img {
 }
 
 #oddruns, #purrfect, #chatapp {
-    background-color: #F0F0EE;
-    border: 5px double #1F2421;
+    background-color: var(--bg-color);
+    border: 5px double var(--accent);
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 5px 5px 1px #1F2421;
+    box-shadow: 5px 5px 1px var(--accent);
 }
 
 #purrfect, #chatapp {
     max-width: 500px;
 }
 
-#oddruns:hover {
-    background-color: #6b7c72;
+#oddruns:hover, 
+#purrfect:hover, 
+#chatapp:hover {
+    transform: translateY(-10px);
+}
+
+#education {
+    background-color: var(--accent);
+    padding: 40px 13%;
+    border-bottom: 1px solid var(--text-color); 
+    box-shadow: 3px 3px 5px var(--text-color);
+}
+
+#oau {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.school-logo {
+    border-radius: 50%;
+    max-width: 80px;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 150px; 
+    padding: var(--space-md)
+}
+
+#contact h2 {
+    font-size: 50px;
+    color: var(--accent)
+}
+
+#contact span {
+    display: block;
+    color: var(--text-color)
+}
+
+.contactform {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 60px;
+    border: 5px double #6b7c72;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    background-color: var(--accent);
+    box-shadow: 5px 5px 1px #6b7c72;
+}
+
+.contactform input,
+.contactform textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--text-color)
+}
+
+.contactform h3 {
+    font-size: 20px;
+    color: var(--bg-color);
+    padding-bottom: 10px;
+}
+
+.contactform p {
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+.contactform input:focus,
+.contactform textarea:focus {
+    outline: 2px solid var(--text-color);
+}
+
+label {
+    padding-bottom: 5px;
+}
+
+.contactform button {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.contactform button:hover {
+    background-color: #6b7c72
 }
