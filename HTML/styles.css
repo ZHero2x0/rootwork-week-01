@@ -277,7 +277,7 @@ footer {
 
 @media (max-width: 1111px) {
     #profile,
-    #skills,
+    #aboutskills,
     #contact {
         gap: 100px;
     }
@@ -317,5 +317,15 @@ footer {
     #toolkit {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 50
     }
 }
