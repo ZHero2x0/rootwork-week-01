@@ -20,8 +20,7 @@
   <body>
     <header>
       <nav aria-label="Main navigation">
-        <a href="#aboutme">About Me</a>
-        <a href="#skills">Skills</a>
+        <a href="#aboutskills">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Send a Message</a>
@@ -43,8 +42,8 @@
     </header>
 
     <main>
-      <div id="aboutskills">
-        <section id="aboutme">
+      <section id="aboutskills">
+        <div id="aboutme">
           <div class="container">
             <h2>Who I am...</h2>
 
@@ -54,11 +53,11 @@
               internet.
             </p>
           </div>
-        </section>
+        </div>
 
-        <section id="skills">
+        <div id="skills">
           <div class="container">
-            <h2>What I know</h2>
+            <h2>What I know...</h2>
             <div id="toolkit">
               <div class="kits">
                 <i class="fa-brands fa-html5 fa-float fa-6x" style="color: rgb(227, 79, 38)"></i>
@@ -80,43 +79,38 @@
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <section id="projects">
-        <div class="container">
-          <h3>Projects</h3>
-          <ol>
-            <li>
-              <p>
-                <a href="https://oddruns.com" target="_blank"><strong>OddRuns:</strong></a>
-                A platform where users can post errands, tasks, or odd jobs and get matched with
-                local helpers.
-              </p>
-            </li>
-            <li>
-              <p>
-                <a href="https://zhero2x0.github.io/Purrfect-Match" target="_blank"
-                  ><strong>Purrfect Match:</strong></a
-                >
-                The Only Human-Feline Dating App.
-              </p>
-            </li>
-            <li>
-              <p>
-                <a href="https://zhero2x0.github.io/chat-app-CSS-illustration/" target="_blank"
-                  ><strong>Chat App:</strong></a
-                >
-                A simple user Interface web page.
-              </p>
-            </li>
-          </ol>
+        <h2>What I built...</h2>
+        <div id="simplebuilds" class="container">
+          <a
+            href="https://zhero2x0.github.io/chat-app-CSS-illustration/"
+            target="_blank"
+            id="chatapp"
+            ><h3>Chat App</h3>
+            <p>A simple user Interface web page.</p></a
+          >
+
+          <a href="https://zhero2x0.github.io/Purrfect-Match" target="_blank" id="purrfect"
+            ><h3>Purrfect Match</h3>
+            <p>The Only Human-Feline Dating App.</p></a
+          >
         </div>
+
+        <a href="https://oddruns.com" target="_blank" id="oddruns"
+          ><h3>OddRuns</h3>
+          <p>
+            A platform where users can post errands, tasks, or odd jobs and get matched with local
+            helpers.
+          </p></a
+        >
       </section>
 
       <section id="education">
         <div class="container">
-          <h2>Education</h2>
+          <h2>What I studied...</h2>
           <h3>Obafemi Awolowo University</h3>
           <p>Bachelor of Science in Microbiology</p>
         </div>

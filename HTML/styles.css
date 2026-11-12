@@ -119,3 +119,39 @@ img {
     background-color: #F0F0EE;
     padding: 5px;
 }
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+#projects a {
+    text-decoration: none;
+    color: #1F2421;
+}
+
+#simplebuilds {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#oddruns, #purrfect, #chatapp {
+    background-color: #F0F0EE;
+    border: 5px double #1F2421;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 5px 5px 1px #1F2421;
+}
+
+#purrfect, #chatapp {
+    max-width: 500px;
+}
+
+#oddruns:hover {
+    background-color: #6b7c72;
+}
