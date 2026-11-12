@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto;
+    background-color: #F0F0EE;
+    color: #1F2421;
+}
+
+.container {
+    max-width: 97%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 500;
+    
+}
+
+h2 {
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: #1F2421;
+}
+
+nav a:hover {
+    color: #6b7c72;
+}
+
+.github {
+    background-color: #1F2421;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    color: white;
+}
+
+.github:hover {
+    background-color: #6b7c72;
+}
+
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 230px;
+    align-items: center;
+    margin: 50px 0;
+}
+
+#profile p {
+    font-size: 20px;
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+img {
+    display: block;
+    border: 10px double #b5cbb9;
+    border-radius: 20%;
+    box-shadow: 20px 20px 0 #b5cbb9;
+}
+
+.chillguy {
+    width: 100%;
+    max-width: 500px;
+}
+
+#aboutme {
+    max-width: 40%;
+}
+
+#aboutskills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: #cbd3c2;
+    padding: 40px 20px;
+}
+
+#toolkit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 70px;
+}
+
+.kits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border: 5px double #b5cbb9;
+    border-radius: 20%;
+    box-shadow: 2px 2px 0 #F0F0EE;
+    background-color: #F0F0EE;
+    padding: 5px;
+}
