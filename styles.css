@@ -79,7 +79,7 @@ nav a:hover {
     font-size: 20px;
 }
 
-#name {
+#profilename {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -326,6 +326,6 @@ footer {
 
 @media (max-width: 500px) {
     h1 {
-        font-size: 50
+        font-size: 50px;
     }
 }
