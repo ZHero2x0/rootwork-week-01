@@ -94,3 +94,9 @@ This improved the alignment and made the section more responsive.
 
 6. Mention one CSS behaviour from the videos that initially confused you and explain how you understand it now.
    I initially found it confusing how Grid controls the placement of icons. I now understand that grid-template-columns sets the number and size of columns. In my ToolKit section, I use three columns on larger screens and two on smaller screens.
+
+## AI disclosure
+
+## AI Disclosure
+
+AI was used to better understand CSS Grid and help debug layout issues, especially icon alignment and spacing. It also helped to clarify some explanations in this README.
