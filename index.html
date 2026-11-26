@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+    <title>Task Tracker</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="task-card">
+        <header>
+          <form id="task-form">
+            <label for="task-input">
+              <h1>
+                <i class="fa-solid fa-list" style="color: #111827"></i>
+                My ToDo Tasks
+              </h1>
+            </label>
+            <input type="text" id="task-input" name="text" placeholder="Add a new task" />
+            <button type="submit">Add</button>
+          </form>
+        </header>
+
+        <nav id="nav-filters">
+          <div id="filters">
+            <button>All</button>
+            <button>Pending</button>
+            <button>Completed</button>
+          </div>
+        </nav>
+
+        <main>
+          <label for="1">
+            <input type="checkbox" id="1" />
+            <p>Create a Task Tracker</p>
+          </label>
+          <label for="2">
+            <input type="checkbox" id="2" />
+            <p>Walk the Dog</p>
+          </label>
+          <label for="3">
+            <input type="checkbox" id="3" />
+            <p>Feed the Cat</p>
+          </label>
+          <label for="4">
+            <input type="checkbox" id="4" />
+            <p>Call the Security Company</p>
+          </label>
+          <label for="5">
+            <input type="checkbox" id="5" />
+            <p>Live</p>
+          </label>
+        </main>
+        <footer>
+          <button type="reset">Clear All</button>
+        </footer>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
