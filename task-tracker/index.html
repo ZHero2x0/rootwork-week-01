@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
@@ -13,22 +18,25 @@
     <div id="container">
       <div id="task-card">
         <header>
-          <h1>
-            <i class="fa-solid fa-list" style="color: #111827"></i>
-            My ToDo Tasks
-          </h1>
+          <div id="todo">
+            <h1>
+              <i class="fa-solid fa-list" style="color: #111827"></i>
+              My ToDo Tasks
+            </h1>
+          </div>
+
           <form id="task-form">
             <label for="task-input"> </label>
             <input type="text" id="task-input" name="text" placeholder="Add a new task" />
-            <button type="submit">Add</button>
+            <button type="submit" id="task-btn">Add</button>
           </form>
         </header>
 
         <nav id="nav-filters">
           <div id="filters">
-            <button>All</button>
-            <button>Pending</button>
-            <button>Completed</button>
+            <button class="filter-btn" id="all">All</button>
+            <button class="filter-btn" id="pending">Pending</button>
+            <button class="filter-btn" id="completed">Completed</button>
           </div>
         </nav>
 
@@ -54,6 +62,7 @@
             <p>Live</p>
           </label>
         </main>
+        <hr />
         <footer>
           <button type="reset">Clear All</button>
         </footer>
