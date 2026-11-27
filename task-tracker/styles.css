@@ -105,12 +105,12 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--space-md);
-    cursor: pointer;
 }
 
 li label {
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 
 .settings {
@@ -139,4 +139,9 @@ footer {
 
 .clear-btn:hover {
     background-color: rgb(255, 37, 37);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #9CA3AF;
 }
