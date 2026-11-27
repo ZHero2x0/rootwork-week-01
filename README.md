@@ -99,4 +99,4 @@ This improved the alignment and made the section more responsive.
 
 ## AI Disclosure
 
-AI was used to better understand CSS Grid and help debug layout issues, especially icon alignment and spacing. It also helped to clarify some explanations in this README.
+AI was used to better understand CSS Grid and help debug layout issues, especially icon alignment and spacing. It also helped to clarify some explanations in this README. It suggested using CSS Grid with `grid-template-columns: repeat(3, 1fr)` to arrange the ToolKit icons into three equal columns instead of using Flexbox alone. I accepted this suggestion because it made the icons more evenly spaced and organized. I also added a media query to change the layout to two columns on smaller screens, making the section more responsive.
