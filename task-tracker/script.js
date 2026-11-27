@@ -28,10 +28,38 @@ taskForm.addEventListener('submit', (e) => {
   console.log(userTextValue);
 });
 
+let currentFilter = 'all';
+const allFilter = document.querySelector('#all');
+allFilter.addEventListener('click', () => {
+  currentFilter = 'all';
+
+  renderTasks();
+});
+const activeFilter = document.querySelector('#active');
+activeFilter.addEventListener('click', () => {
+  currentFilter = 'active';
+
+  renderTasks();
+});
+const completedFilter = document.querySelector('#completed');
+completedFilter.addEventListener('click', () => {
+  currentFilter = 'completed';
+
+  renderTasks();
+});
+
 function renderTasks() {
   taskList.textContent = '';
 
-  for (let task of tasks) {
+  let visibleTasks = tasks;
+  if (currentFilter === 'active') {
+    visibleTasks = tasks.filter((task) => task.completed === false);
+  }
+  if (currentFilter === 'completed') {
+    visibleTasks = tasks.filter((task) => task.completed === true);
+  }
+
+  for (let task of visibleTasks) {
     const listItems = document.createElement('li');
     listItems.classList.add('task');
     const checkbox = document.createElement('input');
@@ -42,6 +70,7 @@ function renderTasks() {
       taskTitle.classList.toggle('completed', task.completed);
 
       console.log(task);
+      renderTasks();
     });
     const taskLabel = document.createElement('label');
     const taskTitle = document.createElement('p');
@@ -49,10 +78,25 @@ function renderTasks() {
     if (task.completed === true) {
       taskTitle.classList.add('completed');
     }
+    const delTasksBtn = document.createElement('button');
+    delTasksBtn.type = 'button';
+    delTasksBtn.setAttribute('aria-label', 'Delete task');
+    delTasksBtn.classList.add('settings');
+    delTasksBtn.addEventListener('click', () => {
+      const taskIndex = tasks.findIndex((item) => item.id === task.id);
+
+      tasks.splice(taskIndex, 1);
+
+      renderTasks();
+    });
+    const trashIcon = document.createElement('i');
+    trashIcon.classList.add('fa-solid', 'fa-trash');
 
     taskLabel.appendChild(checkbox);
     taskLabel.appendChild(taskTitle);
     listItems.appendChild(taskLabel);
+    delTasksBtn.appendChild(trashIcon);
+    listItems.appendChild(delTasksBtn);
     taskList.appendChild(listItems);
   }
 }
