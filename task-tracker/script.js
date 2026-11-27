@@ -3,6 +3,8 @@ const taskForm = document.querySelector('#task-form');
 const userText = document.querySelector('#task-input');
 const errorMessage = document.querySelector('#error');
 const taskList = document.querySelector('.task-box');
+const taskCount = document.querySelector('#task-count');
+const clearAllBtn = document.querySelector('.clear-btn');
 
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -58,6 +60,34 @@ function renderTasks() {
   if (currentFilter === 'completed') {
     visibleTasks = tasks.filter((task) => task.completed === true);
   }
+  taskCount.textContent = visibleTasks.length;
+
+  allFilter.classList.remove('active');
+  activeFilter.classList.remove('active');
+  completedFilter.classList.remove('active');
+  if (currentFilter === 'all') {
+    allFilter.classList.add('active');
+  } else if (currentFilter === 'active') {
+    activeFilter.classList.add('active');
+  } else if (currentFilter === 'completed') {
+    completedFilter.classList.add('active');
+  }
+
+  const emptyState = document.createElement('li');
+  emptyState.classList.add('task');
+  if (tasks.length === 0) {
+    emptyState.textContent = '	No tasks yet. Add your first task!';
+    taskList.appendChild(emptyState);
+    return;
+  } else if (currentFilter === 'active' && visibleTasks.length === 0) {
+    emptyState.textContent = 'No Pending Tasks.';
+    taskList.appendChild(emptyState);
+    return;
+  } else if (currentFilter === 'completed' && visibleTasks.length === 0) {
+    emptyState.textContent = 'No Completed Tasks.';
+    taskList.appendChild(emptyState);
+    return;
+  }
 
   for (let task of visibleTasks) {
     const listItems = document.createElement('li');
@@ -100,3 +130,10 @@ function renderTasks() {
     taskList.appendChild(listItems);
   }
 }
+renderTasks();
+
+clearAllBtn.addEventListener('click', () => {
+  tasks.length = 0;
+
+  renderTasks();
+});

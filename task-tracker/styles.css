@@ -83,11 +83,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: var(--space-md);
-}
-
-.filters #all {
-    background-color: var(--accent-color);
-    color: var(--card-color);
+    max-width: 100%;
 }
 
 .filter-btn {
@@ -97,6 +93,22 @@
     background-color: transparent;
     color: var(--text-color);
     cursor: pointer;
+}
+
+.filter-btn:hover {
+    transform: translateY(-5px);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: var(--card-color);
+    border: none;
+    outline: none;
+}
+
+.filter-btn.active:hover {
+    background-color: rgb(164, 149, 253);
+    color: var(--card-color);
 }
 
 .task-box .task {
