@@ -59,7 +59,7 @@
 }
 
 #task-btn {
-    width: 15%;
+    width: 20%;
     border: none;
     outline: none;
     border-radius: 20px;
@@ -70,15 +70,24 @@
     cursor: pointer;
 }
 
+#task-btn:hover {
+    background-color: rgb(164, 149, 253);
+}
+
 #nav-filters {
     margin: var(--space-md) 0;
 }
 
-#filters {
+.filters {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: var(--space-md);
+}
+
+.filters #all {
+    background-color: var(--accent-color);
+    color: var(--card-color);
 }
 
 .filter-btn {
@@ -88,4 +97,46 @@
     background-color: transparent;
     color: var(--text-color);
     cursor: pointer;
+}
+
+.task-box .task {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md);
+    cursor: pointer;
+}
+
+li label {
+    display: flex;
+    gap: 10px;
+}
+
+.settings {
+    cursor: pointer;
+}
+
+.fa-trash:hover {
+    color: #374151 !important;
+}
+
+footer {
+    margin: var(--space-md) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.clear-btn {
+    padding: 10px 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--card-color);
+    background-color: red;
+}
+
+.clear-btn:hover {
+    background-color: rgb(255, 37, 37);
 }

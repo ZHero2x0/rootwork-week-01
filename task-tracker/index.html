@@ -33,7 +33,7 @@
         </header>
 
         <nav id="nav-filters">
-          <div id="filters">
+          <div class="filters">
             <button class="filter-btn" id="all">All</button>
             <button class="filter-btn" id="pending">Pending</button>
             <button class="filter-btn" id="completed">Completed</button>
@@ -41,30 +41,59 @@
         </nav>
 
         <main>
-          <label for="1">
-            <input type="checkbox" id="1" />
-            <p>Create a Task Tracker</p>
-          </label>
-          <label for="2">
-            <input type="checkbox" id="2" />
-            <p>Walk the Dog</p>
-          </label>
-          <label for="3">
-            <input type="checkbox" id="3" />
-            <p>Feed the Cat</p>
-          </label>
-          <label for="4">
-            <input type="checkbox" id="4" />
-            <p>Call the Security Company</p>
-          </label>
-          <label for="5">
-            <input type="checkbox" id="5" />
-            <p>Live</p>
-          </label>
+          <div class="task-container">
+            <ul class="task-box">
+              <li class="task">
+                <label for="1">
+                  <input type="checkbox" id="1" />
+                  <p>Create a Task Tracker</p>
+                </label>
+                <div class="settings">
+                  <i class="fa-solid fa-trash" style="color: #111827"></i>
+                </div>
+              </li>
+              <li class="task">
+                <label for="2">
+                  <input type="checkbox" id="2" />
+                  <p>Walk the Dog</p>
+                </label>
+                <div class="settings">
+                  <i class="fa-solid fa-trash" style="color: #111827"></i>
+                </div>
+              </li>
+              <li class="task">
+                <label for="3">
+                  <input type="checkbox" id="3" />
+                  <p>Feed the Cat</p>
+                </label>
+                <div class="settings">
+                  <i class="fa-solid fa-trash" style="color: #111827"></i>
+                </div>
+              </li>
+              <li class="task">
+                <label for="4">
+                  <input type="checkbox" id="4" />
+                  <p>Call the Security Company</p>
+                </label>
+                <div class="settings">
+                  <i class="fa-solid fa-trash" id="trash" style="color: #111827"></i>
+                </div>
+              </li>
+              <li class="task">
+                <label for="5">
+                  <input type="checkbox" id="5" />
+                  <p>Live</p>
+                </label>
+                <div class="settings">
+                  <i class="fa-solid fa-trash" style="color: #111827"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
         </main>
-        <hr />
+        <!-- <hr /> -->
         <footer>
-          <button type="reset">Clear All</button>
+          <button type="reset" class="clear-btn">Clear All</button>
         </footer>
       </div>
     </div>
