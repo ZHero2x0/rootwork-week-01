@@ -24,10 +24,6 @@ taskForm.addEventListener('submit', (e) => {
   tasks.push(task);
   renderTasks();
   userText.value = '';
-
-  console.log(tasks);
-  console.log('Form Submitted!');
-  console.log(userTextValue);
 });
 
 let currentFilter = 'all';
@@ -99,7 +95,6 @@ function renderTasks() {
       task.completed = checkbox.checked;
       taskTitle.classList.toggle('completed', task.completed);
 
-      console.log(task);
       renderTasks();
     });
     const taskLabel = document.createElement('label');
